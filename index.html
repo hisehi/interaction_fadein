@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .visual {
+            background-image: url(img/background_img.jpg);
+        }
+        .visual .inner {
+            width: 1100px;
+            margin: 0 auto;
+            height: 646px;
+            position: relative;
+        }
+        .visual .title {
+            position: absolute;
+            top: -50px;
+            left: 300px;
+        }
+        .visual .title img{
+            width: 470px;
+        }
+
+        .visual .strawberrycake .image{
+            position: absolute;
+            top: 170px;
+            left: -100px;
+            width: 700px;
+            
+        }
+        .visual .strawberrycake .text{
+            position: absolute;
+            width: 200px;
+            top: 150px;
+            left: 50px;
+        }
+
+        .visual .strawberryade .image{
+            position: absolute;
+            top: 100px;
+            right: -50px;
+            width: 450px;
+        }
+        .visual .strawberryade .text{
+            position: absolute;
+            width: 200px;
+            right: -80px;
+            top: 150px;
+        }
+
+        .visual .strawberrysmoothie .image{
+            position: absolute;
+            top: 250px;
+            right: 200px;
+            width: 280px;
+        }
+        .visual .strawberrysmoothie .text{
+            position: absolute;
+            width: 200px;
+            right: 410px;
+            top: 250px;
+        }
+        
+
+        .visual .strawberry_1{
+            position: absolute;
+            bottom: 0;
+            left: -80px;
+        }
+        .visual .strawberry_1 img{
+            width: 220px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <section class="visual">
+        <div class="inner">
+            <div class="title fade-in">
+                <img src="img/title.png" alt="">
+            </div>
+            <div class="strawberrycake fade-in">
+                <img src="img/strawberrycake.png" alt="" class="image">
+                <img src="img/strawberryade_text.png" alt="" class="text">
+            </div>
+            
+            <div class="strawberryade fade-in">
+                <img src="img/strawberryade.png" alt="" class="image">
+                <img src="img/strawberryade_text.png" alt="" class="text">
+            </div>
+
+            <div class="strawberrysmoothie fade-in">
+                <img src="img/straeberrysmoothie.png" alt="" class="image">
+                <img src="img/strawberrysmoothie_text.png" alt="" class="text">
+            </div>
+
+            <div class="strawberry_1 fade-in">
+                <img src="img/strawberry.png" alt="" class="">
+            </div>
+            
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script>
+        const fadeEls = document.querySelectorAll('.visual .fade-in');
+        gsap.from(fadeEls, {
+            duration: 5,
+            scale: 0.3,
+            ease: 'bounce.out',
+            opacity: 0,
+            stagger: 0.7
+        })
+        
+    </script>
+</body>
+</html>
